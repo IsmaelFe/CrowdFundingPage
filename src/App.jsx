@@ -14,18 +14,8 @@ function App() {
           className="img-desktop"
         ></img>
       </div>
-      <nav className="nav-bar">
-        <img src="../public/images/logo.svg"></img>
-        <div>
-          <ul>
-            <li>About</li>
-            <li>Descover</li>
-            <li>Get Started</li>
-          </ul>
-        </div>
-      </nav>
       <Nav_bar />
-      <main>
+      <main className="main">
         <Back_project />
         <Accumulated_project />
         <div>

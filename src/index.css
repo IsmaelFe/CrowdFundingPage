@@ -6,6 +6,10 @@
     font-family: 'Commissioner', sans-serif;
 }
 
+body {
+    background-color: #FBFAFB;
+}
+
 .img-container {
     position: relative;
 }
@@ -38,3 +42,61 @@ li {
     width: 100%;
     height: auto;
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: -2000px;
+    max-width: 50%;
+    background-color: #FBFAFB;
+    margin: auto;
+}
+
+.container-back {
+    background-color: white;
+    position: relative;
+    margin-top: -13%;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.container-back-1 {
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.container-back-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 5% 2% 5%;
+}
+
+.button-back-1 {
+    border-radius: 30px;
+    border: none;
+    width: 25%;
+    height: 50px;
+    background-color: #3CB5AA;
+    color: white;
+}
+
+.button-back-2 {
+    display: flex;
+    align-items: center;    
+    gap: 5px;
+    border-radius: 30px;
+    border: none;
+    width: 20%;
+    height: 50px;
+    background-color: gray;
+}
+
+.logo-mastercraft {
+    top: -30px;
+    left: 47%;
+    position: absolute;
+}
+
+
