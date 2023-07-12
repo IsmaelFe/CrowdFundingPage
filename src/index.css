@@ -38,6 +38,10 @@ li {
     color: white;
 }
 
+p {
+    color: #8E8E8F;
+}
+
 .img-desktop {
     width: 100%;
     height: auto;
@@ -90,7 +94,7 @@ li {
     border: none;
     width: 20%;
     height: 50px;
-    background-color: gray;
+    background-color: #F5F5F4;
 }
 
 .logo-mastercraft {
@@ -99,4 +103,34 @@ li {
     position: absolute;
 }
 
+.container-accumulated {
+    background-color: white;
+    border-radius: 6px;
+    padding: 3% 7%;
+}
 
+.container-accumulated-1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-weight: 700;
+    font-size: 2em;
+}
+
+hr {
+    width: 1px;
+    border: none;
+    background-color: #acacac48;
+}
+
+.range {
+    height: 12px;
+    width: 100%;
+    border-radius: 8px;
+    -webkit-appearance: none; 
+    appearance: none;
+    background-color: #F5F5F4;
+}
