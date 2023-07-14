@@ -134,3 +134,59 @@ hr {
     appearance: none;
     background-color: #F5F5F4;
 }
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    border-radius: 6px;
+    padding: 3% 7%;
+}
+
+.container-card-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 3%;
+}
+
+.container-card-tittle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pledge {
+    color: #3CB5AA;
+}
+
+.container-card-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.select {
+    border-radius: 30px;
+    border: none;
+    width: 20%;
+    height: 45px;
+    background-color: #3CB5AA;
+    color: white;
+}
+
+.number {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.number-text {
+    color: #8E8E8F;
+    font-size: 0.5em;
+    font-weight: 300;
+}
