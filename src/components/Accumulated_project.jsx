@@ -1,6 +1,10 @@
 import React from "react";
 
 const Accumulated_project = () => {
+  let style = {
+    width: "80%",
+  };
+
   return (
     <div className="container-accumulated">
       <div className="container-accumulated-1">
@@ -19,7 +23,9 @@ const Accumulated_project = () => {
           <p>days left</p>
         </div>
       </div>
-      <input className="range" type="range"></input>
+      <div className="range">
+        <div className="range-1" style={style}></div>
+      </div>
     </div>
   );
 };

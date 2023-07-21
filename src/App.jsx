@@ -3,6 +3,7 @@ import Accumulated_project from "./components/Accumulated_project";
 import Back_project from "./components/Back_project";
 import Card from "./components/Card";
 import Nav_bar from "./components/Nav_bar";
+import container from "./data/data";
 
 function App() {
   return (
@@ -32,7 +33,9 @@ function App() {
             extra desk space below your computer to allow notepads, pens, and
             USB sticks to be stored under the stand.
           </p>
-          <Card />
+          {container.map((content, i) => (
+            <Card content={content} key={i} />
+          ))}
         </div>
       </main>
     </div>

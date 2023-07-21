@@ -14,10 +14,12 @@ const Back_project = () => {
           A beautiful & handcrafted monitor stand to reduce neck and eye strain.
         </p>
         <div className="container-back-2">
-          <button className="button-back-1"> Back this project</button>
+          <button className="button-back-1" style={{ fontWeight: "700" }}>
+            Back this project
+          </button>
           <div className="button-back-2">
             <img src="../../public/images/icon-bookmark.svg"></img>
-            <p>Bookmark</p>
+            <p style={{ fontWeight: "700" }}>Bookmark</p>
           </div>
         </div>
       </div>
