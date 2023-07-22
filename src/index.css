@@ -222,3 +222,74 @@ hr {
 .container-number {
     line-height: 2.5em;
 }
+
+.container-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: black;
+}
+
+.container-modal-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 45%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 6px;
+}
+
+.form-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.selected {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px 20px; 
+}
+
+.selected p {
+    line-height: 2em;
+    margin-left: 6%;
+}
+
+.selected input {
+    width: 3%;
+}
+
+.selected-pledge {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.selected-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.selected-1 span {
+    color: #3CB5AA;
+}
+
+.selected-number {
+    margin-left: 40px;
+}
+
+.selected-number span{
+    color: gray;
+    margin-left: 15%;
+    font-size: 0.8em;
+    font-weight: 300;
+}

@@ -2,12 +2,14 @@ import "./App.css";
 import Accumulated_project from "./components/Accumulated_project";
 import Back_project from "./components/Back_project";
 import Card from "./components/Card";
+import Modal_component from "./components/Modal_component";
 import Nav_bar from "./components/Nav_bar";
 import container from "./data/data";
 
 function App() {
   return (
     <div className="container-main">
+      <Modal_component />
       <div className="img-container">
         <img
           src="../public/images/image-hero-desktop.jpg"
