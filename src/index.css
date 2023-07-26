@@ -250,41 +250,51 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    gap: 20px;
 }
 
 .selected {
+    display: grid;
     border: 1px solid black;
     border-radius: 5px;
     padding: 30px 20px; 
+    grid-template-areas: 
+            "input- area tittle-area second-area num-area"
+            "text-area";
+}
+
+.selected label {
+    font-weight: 700;
+    grid-area: tittle-area;
 }
 
 .selected p {
     line-height: 2em;
     margin-left: 6%;
+    grid-area: text-area;
 }
 
 .selected input {
     width: 3%;
+    grid-area: input-area;
 }
 
 .selected-pledge {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 
 .selected-1 {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 
 .selected-1 span {
     color: #3CB5AA;
+    grid-area: second-area;
 }
 
 .selected-number {
     margin-left: 40px;
+    grid-area: num-area;
 }
 
 .selected-number span{
@@ -292,4 +302,5 @@ hr {
     margin-left: 15%;
     font-size: 0.8em;
     font-weight: 300;
+    grid-area: num-area;
 }

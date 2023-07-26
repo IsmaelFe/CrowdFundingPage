@@ -11,10 +11,8 @@ const Modal_component = () => {
         </p>
         <form className="form-modal">
           <div className="selected selected-pledge">
-            <label htmlFor="pledge">
-              <input type="radio" id="pledge"></input>
-              Pledge whith no reward
-            </label>
+            <input type="radio" id="pledge"></input>
+            <label htmlFor="pledge">Pledge whith no reward</label>
             <p>
               Choose to support us without a reward if you simply believe in our
               project. As a backer, you will be signed up to receive product
@@ -22,9 +20,8 @@ const Modal_component = () => {
             </p>
           </div>
           <div className="selected selected-1">
-            <label htmlFor="bamboo"></label>
             <input type="radio" id="bamboo"></input>
-            Bamboo stand
+            <label htmlFor="bamboo">Bamboo stand</label>
             <span>Pledge $25 or more</span>
             <div className="selected-number">
               101
@@ -37,9 +34,8 @@ const Modal_component = () => {
             </p>
           </div>
           <div className="selected selected-1">
-            <label htmlFor="blackE"></label>
             <input type="radio" id="blackE"></input>
-            Black Edition Stand
+            <label htmlFor="blackE">Black Edition Stand</label>
             <span>Pledge $75 or more</span>
             <div className="selected-number">
               64
@@ -52,9 +48,8 @@ const Modal_component = () => {
             </p>
           </div>
           <div className="selected selected-1">
-            <label htmlFor="mahogany"></label>
             <input type="radio" id="mahogany"></input>
-            Mahogany Special Edition
+            <label htmlFor="mahogany">Mahogany Special Edition</label>
             <span>Pledge $200 or more</span>
             <div className="selected-number">
               0<span>left</span>
