@@ -259,8 +259,8 @@ hr {
     border-radius: 5px;
     padding: 30px 20px; 
     grid-template-areas: 
-            "input- area tittle-area second-area num-area"
-            "text-area";
+            "input-area tittle-area second-area num-area"
+            "text-area text-area text-area text-area";
 }
 
 .selected label {
@@ -275,16 +275,8 @@ hr {
 }
 
 .selected input {
-    width: 3%;
+    width: 100%;
     grid-area: input-area;
-}
-
-.selected-pledge {
-    gap: 15px;
-}
-
-.selected-1 {
-    gap: 15px;
 }
 
 .selected-1 span {
