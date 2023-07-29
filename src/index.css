@@ -255,12 +255,13 @@ hr {
 
 .selected {
     display: grid;
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid rgba(168, 168, 168, 0.438);
+    border-radius: 6px;
     padding: 30px 20px; 
     grid-template-areas: 
-            "input-area tittle-area second-area num-area"
-            "text-area text-area text-area text-area";
+    "input-area tittle-area second-area num-area"
+    "text-area text-area text-area text-area";
+    grid-template-columns: 5% auto auto auto;
 }
 
 .selected label {
@@ -270,28 +271,53 @@ hr {
 
 .selected p {
     line-height: 2em;
-    margin-left: 6%;
+    margin-left: 5%;
+    margin-top: 2%;
     grid-area: text-area;
 }
 
 .selected input {
-    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(128, 128, 128, 0.301);
+    border-radius: 50%;
+    outline: none;
     grid-area: input-area;
+}
+
+.selected input::before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 3px; 
+    border-radius: 50%;
+    background-color: white; 
+}
+
+.selected input:checked::before {
+    background-color: #3CB5AA;
 }
 
 .selected-1 span {
     color: #3CB5AA;
+    font-weight: 700;
     grid-area: second-area;
 }
 
 .selected-number {
-    margin-left: 40px;
+    text-align: end;
+    font-weight: 700;
+    margin-right: 10%;
     grid-area: num-area;
 }
 
 .selected-number span{
     color: gray;
-    margin-left: 15%;
+    margin-left: 5%;
     font-size: 0.8em;
     font-weight: 300;
     grid-area: num-area;
