@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Accumulated_project from "./components/Accumulated_project";
 import Back_project from "./components/Back_project";
@@ -7,9 +8,41 @@ import Nav_bar from "./components/Nav_bar";
 import container from "./data/data";
 
 function App() {
+  const statusModal = [
+    {
+      id: "pledge",
+      status: false,
+    },
+    {
+      id: "bamboo",
+      status: false,
+    },
+    {
+      id: "blackE",
+      status: false,
+    },
+    {
+      id: "mahogany",
+      status: false,
+    },
+  ];
+
+  const [selectdModal, setSelectdModal] = useState(statusModal);
+
+  const changeModal = (e) => {
+    let newModal = [...selectdModal];
+    for (let i = 0; i < newModal.length; i++) {
+      newModal[i].status = false;
+      if (newModal[i].id === e.target.id) {
+        newModal[i].status = true;
+      }
+    }
+    setSelectdModal(newModal);
+  };
+
   return (
     <div className="container-main">
-      <Modal_component />
+      <Modal_component select={selectdModal} change={changeModal} />
       <div className="img-container">
         <img
           src="../public/images/image-hero-desktop.jpg"

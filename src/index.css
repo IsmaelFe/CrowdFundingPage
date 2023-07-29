@@ -228,7 +228,7 @@ hr {
     justify-content: center;
     align-items: center;
     position: fixed;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: 10;
     padding: 20px;
@@ -240,7 +240,8 @@ hr {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 45%;
+    min-height: 80vh;
+    max-width: 40%;
     background-color: white;
     padding: 2%;
     border-radius: 6px;
@@ -255,6 +256,7 @@ hr {
 
 .selected {
     display: grid;
+    height: 11%;
     border: 1px solid rgba(168, 168, 168, 0.438);
     border-radius: 6px;
     padding: 30px 20px; 
@@ -270,7 +272,8 @@ hr {
 }
 
 .selected p {
-    line-height: 2em;
+    line-height: 1.8em;
+    font-size: 0.8em;
     margin-left: 5%;
     margin-top: 2%;
     grid-area: text-area;
