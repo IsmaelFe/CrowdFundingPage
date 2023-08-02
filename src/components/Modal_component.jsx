@@ -4,7 +4,10 @@ const Modal_component = ({ select, change }) => {
   return (
     <div className="container-modal">
       <div className="container-modal-1">
-        <h2>Back this project</h2>
+        <div className="icon-close">
+          <h2>Back this project</h2>
+          <img src="../../public/images/icon-close-modal.svg" alt="close"></img>
+        </div>
         <p>
           Want to support us in bringing Mastercraft Bamboo Monitor Rise out in
           the world?
@@ -25,7 +28,7 @@ const Modal_component = ({ select, change }) => {
               updates via email.
             </p>
           </div>
-          <div className="selected selected-1">
+          <div className={`selected ${select[1].status ? "selected-1" : " "}`}>
             <input
               checked={select[1].status}
               onChange={change}
@@ -47,12 +50,14 @@ const Modal_component = ({ select, change }) => {
             {select[1].status ? (
               <div className="select-modal">
                 <p>Enter your pledge</p>
-                <input type="text"></input>
-                <button>Continue</button>
+                <div className="container-continue">
+                  <input type="text"></input>
+                  <button>Continue</button>
+                </div>
               </div>
             ) : null}
           </div>
-          <div className="selected selected-1">
+          <div className={`selected ${select[2].status ? "selected-1" : " "}`}>
             <input
               checked={select[2].status}
               onChange={change}
@@ -74,12 +79,14 @@ const Modal_component = ({ select, change }) => {
             {select[2].status ? (
               <div className="select-modal">
                 <p>Enter your pledge</p>
-                <input type="text"></input>
-                <button>Continue</button>
+                <div className="container-continue">
+                  <input type="text"></input>
+                  <button>Continue</button>
+                </div>
               </div>
             ) : null}
           </div>
-          <div className="selected selected-1">
+          <div className="selected">
             <input
               checked={select[3].status}
               onChange={change}
