@@ -1,12 +1,17 @@
 import PropTypes from "prop-types";
 
-const Modal_component = ({ select, change }) => {
+const Modal_component = ({ select, change, closeM }) => {
   return (
     <div className="container-modal">
       <div className="container-modal-1">
         <div className="icon-close">
           <h2>Back this project</h2>
-          <img src="../../public/images/icon-close-modal.svg" alt="close"></img>
+          <button className="button-close" onClick={closeM}>
+            <img
+              src="../../public/images/icon-close-modal.svg"
+              alt="close"
+            ></img>
+          </button>
         </div>
         <p>
           Want to support us in bringing Mastercraft Bamboo Monitor Rise out in
@@ -47,16 +52,16 @@ const Modal_component = ({ select, change }) => {
               helped us launch our promotional campaign, and you’ll be added to
               a special Backer member list.
             </p>
-            {select[1].status ? (
-              <div className="select-modal">
-                <p>Enter your pledge</p>
-                <div className="container-continue">
-                  <input type="text"></input>
-                  <button>Continue</button>
-                </div>
-              </div>
-            ) : null}
           </div>
+          {select[1].status ? (
+            <div className="select-modal">
+              <p>Enter your pledge</p>
+              <div className="container-continue">
+                <input type="number"></input>
+                <button>Continue</button>
+              </div>
+            </div>
+          ) : null}
           <div className={`selected ${select[2].status ? "selected-1" : " "}`}>
             <input
               checked={select[2].status}
@@ -76,23 +81,24 @@ const Modal_component = ({ select, change }) => {
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            {select[2].status ? (
-              <div className="select-modal">
-                <p>Enter your pledge</p>
-                <div className="container-continue">
-                  <input type="text"></input>
-                  <button>Continue</button>
-                </div>
-              </div>
-            ) : null}
           </div>
-          <div className="selected">
+          {select[2].status ? (
+            <div className="select-modal">
+              <p>Enter your pledge</p>
+              <div className="container-continue">
+                <input type="number"></input>
+                <button>Continue</button>
+              </div>
+            </div>
+          ) : null}
+          <div className="selected selected-2">
             <input
               checked={select[3].status}
               onChange={change}
               name="modal"
               type="radio"
               id="mahogany"
+              disabled
             ></input>
             <label htmlFor="mahogany">Mahogany Special Edition</label>
             <span>Pledge $200 or more</span>
@@ -114,6 +120,7 @@ const Modal_component = ({ select, change }) => {
 Modal_component.propTypes = {
   select: PropTypes.array,
   change: PropTypes.func,
+  closeM: PropTypes.func,
 };
 
 export default Modal_component;

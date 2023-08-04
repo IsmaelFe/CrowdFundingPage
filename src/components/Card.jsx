@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Card = ({ content }) => {
+const Card = ({ content, openM }) => {
   return (
     <div
       className={
@@ -24,6 +24,7 @@ const Card = ({ content }) => {
           className={
             content.button === "Out of Stock" ? "select-out" : "select"
           }
+          onClick={openM}
         >
           {content.button}
         </button>
@@ -34,6 +35,7 @@ const Card = ({ content }) => {
 
 Card.protoType = {
   content: PropTypes.object,
+  openM: PropTypes.func,
 };
 
 export default Card;

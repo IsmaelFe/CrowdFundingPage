@@ -28,6 +28,7 @@ function App() {
   ];
 
   const [selectdModal, setSelectdModal] = useState(statusModal);
+  const [openCloseM, setOpenCloseM] = useState(false);
 
   const changeModal = (e) => {
     let newModal = [...selectdModal];
@@ -40,9 +41,20 @@ function App() {
     setSelectdModal(newModal);
   };
 
+  const closeModal = () => {
+    let openM = !openCloseM;
+    setOpenCloseM(openM);
+  };
+
   return (
     <div className="container-main">
-      <Modal_component select={selectdModal} change={changeModal} />
+      {openCloseM ? (
+        <Modal_component
+          select={selectdModal}
+          change={changeModal}
+          closeM={closeModal}
+        />
+      ) : null}
       <div className="img-container">
         <img
           src="../public/images/image-hero-desktop.jpg"
@@ -69,7 +81,7 @@ function App() {
             USB sticks to be stored under the stand.
           </p>
           {container.map((content, i) => (
-            <Card content={content} key={i} />
+            <Card content={content} key={i} openM={closeModal} />
           ))}
         </div>
       </main>
