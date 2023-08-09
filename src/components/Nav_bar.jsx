@@ -4,7 +4,7 @@ const Nav_bar = () => {
   return (
     <nav className="nav-bar">
       <img src="../public/images/logo.svg"></img>
-      <div>
+      <div className="nav-bar-2">
         <ul>
           <li>About</li>
           <li>Descover</li>

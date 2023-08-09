@@ -26,6 +26,10 @@ body {
     width: 100%;
 }
 
+.nav-bar-2 ul li {
+    cursor: pointer;
+}
+
 ul {
     display: flex;
     gap: 30px;
@@ -85,6 +89,11 @@ p {
     height: 50px;
     background-color: #3CB5AA;
     color: white;
+    cursor: pointer;
+}
+
+.button-back-1:hover {
+    background-color:  hsl(176, 72%, 28%);
 }
 
 .button-back-2 {
@@ -96,6 +105,7 @@ p {
     width: 20%;
     height: 50px;
     background-color: #F5F5F4;
+    cursor: pointer;
 }
 
 .logo-mastercraft {
@@ -195,6 +205,10 @@ hr {
     background-color: #3CB5AA;
     color: white;
     cursor: pointer;
+}
+
+.select:hover {
+    background-color:  hsl(176, 72%, 28%);
 }
 
 .select-out {
@@ -383,6 +397,24 @@ hr {
     height: 37px;
     border-radius: 25px;
     border: 1px solid #8E8E8F;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 700;
+    appearance: textfield; 
+    -moz-appearance: textfield;
+    -webkit-appearance: none;
+}
+
+.container-continue input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0; /* Puede necesitar ajustarse según el diseño */
+  }
+
+.container-continue input:focus {
+    border: 1px solid #3CB5AA;
+    outline: none;
 }
 
 .container-continue button {
@@ -393,6 +425,10 @@ hr {
     background-color: #3CB5AA;
     color: white;
     cursor: pointer;
+}
+
+.container-continue button:hover {
+    background-color: hsl(176, 72%, 28%);
 }
 
 .button-close {

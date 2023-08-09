@@ -25,6 +25,7 @@ const Card = ({ content, openM }) => {
             content.button === "Out of Stock" ? "select-out" : "select"
           }
           onClick={openM}
+          disabled={content.button === "Out of Stock" ? true : false}
         >
           {content.button}
         </button>
