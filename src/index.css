@@ -456,3 +456,52 @@ hr {
 .selected-2 .selected-number span {
     color: #8e8e8f8a;
 }
+
+.container-completed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    width: 100%;
+}
+
+.container-completed-1 {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 6px;
+    background-color: white;
+    padding: 2%;
+}
+
+.container-completed-1 button {
+    width: 25%;
+    height: 40px;
+    margin: auto;
+    border-radius: 20px;
+    border: none;
+    background-color: #3CB5AA;
+    color: white;
+    cursor: pointer;
+}
+
+.container-completed-1 button:hover {
+    background-color: hsl(176, 72%, 28%);
+}
+
+.container-completed-1 img {
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+.container-completed-1 h3 {
+    margin-bottom: 10px;
+}
+
+.container-completed-1 button {
+    margin-top: 25px;
+}

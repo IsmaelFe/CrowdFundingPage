@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Modal_component = ({ select, change, closeM }) => {
+const Modal_component = ({ select, change, closeM, open }) => {
   return (
     <div className="container-modal">
       <div className="container-modal-1">
@@ -58,7 +58,7 @@ const Modal_component = ({ select, change, closeM }) => {
               <p>Enter your pledge</p>
               <div className="container-continue">
                 <input type="number"></input>
-                <button>Continue</button>
+                <button onClick={open}>Continue</button>
               </div>
             </div>
           ) : null}
@@ -87,7 +87,7 @@ const Modal_component = ({ select, change, closeM }) => {
               <p>Enter your pledge</p>
               <div className="container-continue">
                 <input type="number"></input>
-                <button>Continue</button>
+                <button onClick={open}>Continue</button>
               </div>
             </div>
           ) : null}
@@ -121,6 +121,7 @@ Modal_component.propTypes = {
   select: PropTypes.array,
   change: PropTypes.func,
   closeM: PropTypes.func,
+  open: PropTypes.func,
 };
 
 export default Modal_component;

@@ -6,6 +6,7 @@ import Card from "./components/Card";
 import Modal_component from "./components/Modal_component";
 import Nav_bar from "./components/Nav_bar";
 import container from "./data/data";
+import Modal_completed from "./components/Modal_completed";
 
 function App() {
   const statusModal = [
@@ -29,6 +30,7 @@ function App() {
 
   const [selectdModal, setSelectdModal] = useState(statusModal);
   const [openCloseM, setOpenCloseM] = useState(false);
+  const [closeComplet, setCloseComplet] = useState(false);
 
   const changeModal = (e) => {
     let newModal = [...selectdModal];
@@ -42,8 +44,16 @@ function App() {
   };
 
   const closeModal = () => {
-    let openM = !openCloseM;
-    setOpenCloseM(openM);
+    setOpenCloseM(!openCloseM);
+  };
+
+  const closeCompleted = () => {
+    setOpenCloseM(!openCloseM);
+    setCloseComplet(!closeComplet);
+  };
+
+  const gotIt = () => {
+    setCloseComplet(!closeCompleted);
   };
 
   return (
@@ -53,8 +63,10 @@ function App() {
           select={selectdModal}
           change={changeModal}
           closeM={closeModal}
+          open={closeCompleted}
         />
       ) : null}
+      {closeComplet ? <Modal_completed close={gotIt} /> : null}
       <div className="img-container">
         <img
           src="../public/images/image-hero-desktop.jpg"
