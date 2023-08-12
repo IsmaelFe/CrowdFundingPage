@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const Modal_completed = ({ open, close }) => {
+export const Modal_completed = ({ close }) => {
   return (
     <div className="container-completed">
       <div className="container-completed-1">

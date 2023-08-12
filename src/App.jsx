@@ -17,10 +17,12 @@ function App() {
     {
       id: "bamboo",
       status: false,
+      value: 25,
     },
     {
       id: "blackE",
       status: false,
+      value: 75,
     },
     {
       id: "mahogany",
@@ -31,6 +33,11 @@ function App() {
   const [selectdModal, setSelectdModal] = useState(statusModal);
   const [openCloseM, setOpenCloseM] = useState(false);
   const [closeComplet, setCloseComplet] = useState(false);
+  const [markBook, setMarckBook] = useState(false);
+
+  const changeBook = () => {
+    setMarckBook(!markBook);
+  };
 
   const changeModal = (e) => {
     let newModal = [...selectdModal];
@@ -76,7 +83,7 @@ function App() {
       </div>
       <Nav_bar />
       <main className="main">
-        <Back_project />
+        <Back_project change={changeBook} changeM={markBook} />
         <Accumulated_project />
         <div className="container-card">
           <h2> About this project</h2>

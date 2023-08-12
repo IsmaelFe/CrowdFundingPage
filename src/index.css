@@ -69,6 +69,7 @@ p {
     z-index: 1;
 }
 
+
 .container-back-1 {
     padding: 20px;
     margin-top: 25px;
@@ -295,6 +296,11 @@ hr {
 .selected label {
     font-weight: 700;
     grid-area: tittle-area;
+    cursor: pointer;
+}
+
+.selected label:hover {
+    color: #3CB5AA;
 }
 
 .selected p {
@@ -326,6 +332,10 @@ hr {
     margin: 3px; 
     border-radius: 50%;
     background-color: white; 
+}
+
+.selected input[type=radio]:hover {
+    border: 1px solid #3CB5AA;
 }
 
 .selected input[type=radio]:checked::before {
@@ -377,7 +387,7 @@ hr {
     border-right: solid 2px #3CB5AA;
     border-bottom: solid 2px #3CB5AA;
     border-radius: 0px 0px 6px 6px;
-    margin-top: -3%;
+    margin-top: -4.5%;
     padding: 25px 20px 20px 20px;
 }
 
