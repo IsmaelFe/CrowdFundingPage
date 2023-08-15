@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Modal_component = ({ select, change, closeM, open }) => {
+const Modal_component = ({ select, change, closeM, open, asing, update }) => {
   return (
     <div className="container-modal">
       <div className="container-modal-1">
@@ -57,8 +57,11 @@ const Modal_component = ({ select, change, closeM, open }) => {
             <div className="select-modal">
               <p>Enter your pledge</p>
               <div className="container-continue">
-                <input type="number"></input>
-                <button onClick={open}>Continue</button>
+                <input
+                  type="number"
+                  onKeyUp={(e) => asing(e.target.value)}
+                ></input>
+                <button onClick={update}>Continue</button>
               </div>
             </div>
           ) : null}
@@ -86,8 +89,11 @@ const Modal_component = ({ select, change, closeM, open }) => {
             <div className="select-modal">
               <p>Enter your pledge</p>
               <div className="container-continue">
-                <input type="number"></input>
-                <button onClick={open}>Continue</button>
+                <input
+                  type="number"
+                  onKeyUp={(e) => asing(e.target.value)}
+                ></input>
+                <button onClick={update}>Continue</button>
               </div>
             </div>
           ) : null}
@@ -122,6 +128,8 @@ Modal_component.propTypes = {
   change: PropTypes.func,
   closeM: PropTypes.func,
   open: PropTypes.func,
+  asing: PropTypes.func,
+  update: PropTypes.func,
 };
 
 export default Modal_component;

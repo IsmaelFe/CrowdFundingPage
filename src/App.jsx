@@ -5,8 +5,10 @@ import Back_project from "./components/Back_project";
 import Card from "./components/Card";
 import Modal_component from "./components/Modal_component";
 import Nav_bar from "./components/Nav_bar";
-import container from "./data/data";
 import Modal_completed from "./components/Modal_completed";
+import { container, dataAccumulated } from "./data/data";
+
+let mont = 0;
 
 function App() {
   const statusModal = [
@@ -30,6 +32,7 @@ function App() {
     },
   ];
 
+  const [accumulated, setAccumulated] = useState(dataAccumulated);
   const [selectdModal, setSelectdModal] = useState(statusModal);
   const [openCloseM, setOpenCloseM] = useState(false);
   const [closeComplet, setCloseComplet] = useState(false);
@@ -63,6 +66,24 @@ function App() {
     setCloseComplet(!closeCompleted);
   };
 
+  const asignValue = (e) => {
+    mont = parseInt(e);
+  };
+
+  const backersUpdate = () => {
+    const newState = {
+      ...accumulated,
+    };
+    setAccumulated({
+      ...newState,
+      accumulated: newState.accumulated + mont,
+      backers: newState.backers + 1,
+    });
+
+    setOpenCloseM(!openCloseM);
+    setCloseComplet(!closeComplet);
+  };
+
   return (
     <div className="container-main">
       {openCloseM ? (
@@ -71,6 +92,8 @@ function App() {
           change={changeModal}
           closeM={closeModal}
           open={closeCompleted}
+          asing={asignValue}
+          update={backersUpdate}
         />
       ) : null}
       {closeComplet ? <Modal_completed close={gotIt} /> : null}
@@ -84,7 +107,7 @@ function App() {
       <Nav_bar />
       <main className="main">
         <Back_project change={changeBook} changeM={markBook} />
-        <Accumulated_project />
+        <Accumulated_project accumulate={accumulated} />
         <div className="container-card">
           <h2> About this project</h2>
           <p>

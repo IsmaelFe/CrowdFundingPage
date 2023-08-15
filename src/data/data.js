@@ -1,4 +1,4 @@
-let container = [
+export let container = [
   {
     title: "Bamboo Stand",
     pledge: "Pledge $25 or more",
@@ -28,4 +28,9 @@ let container = [
   },
 ];
 
-export default container;
+export let dataAccumulated = {
+  accumulated: 899414,
+  back: 1000,
+  backers: 5007,
+  days: 56,
+};
