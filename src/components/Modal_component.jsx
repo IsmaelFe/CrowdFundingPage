@@ -57,10 +57,7 @@ const Modal_component = ({ select, change, closeM, open, asing, update }) => {
             <div className="select-modal">
               <p>Enter your pledge</p>
               <div className="container-continue">
-                <input
-                  type="number"
-                  onKeyUp={(e) => asing(e.target.value)}
-                ></input>
+                <input type="number" min={25} onKeyUp={(e) => asing(e)}></input>
                 <button onClick={update}>Continue</button>
               </div>
             </div>
@@ -89,10 +86,7 @@ const Modal_component = ({ select, change, closeM, open, asing, update }) => {
             <div className="select-modal">
               <p>Enter your pledge</p>
               <div className="container-continue">
-                <input
-                  type="number"
-                  onKeyUp={(e) => asing(e.target.value)}
-                ></input>
+                <input type="number" min={75} onKeyUp={(e) => asing(e)}></input>
                 <button onClick={update}>Continue</button>
               </div>
             </div>

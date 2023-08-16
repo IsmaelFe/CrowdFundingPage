@@ -9,6 +9,7 @@ import Modal_completed from "./components/Modal_completed";
 import { container, dataAccumulated } from "./data/data";
 
 let mont = 0;
+let accept = false;
 
 function App() {
   const statusModal = [
@@ -38,6 +39,15 @@ function App() {
   const [closeComplet, setCloseComplet] = useState(false);
   const [markBook, setMarckBook] = useState(false);
 
+  const completedModal = () => {
+    let newModal = [...selectdModal];
+    for (let i = 0; i < newModal.length; i++) {
+      newModal[i].status = false;
+    }
+    setSelectdModal(newModal);
+    accept = false;
+  };
+
   const changeBook = () => {
     setMarckBook(!markBook);
   };
@@ -64,24 +74,33 @@ function App() {
 
   const gotIt = () => {
     setCloseComplet(!closeCompleted);
+    completedModal();
   };
 
   const asignValue = (e) => {
-    mont = parseInt(e);
+    console.log(e);
+    let min = e.target.min;
+    let value = e.target.value;
+    if (value >= min) {
+      mont = parseInt(value);
+      accept = true;
+    }
   };
 
   const backersUpdate = () => {
-    const newState = {
-      ...accumulated,
-    };
-    setAccumulated({
-      ...newState,
-      accumulated: newState.accumulated + mont,
-      backers: newState.backers + 1,
-    });
+    if (accept) {
+      const newState = {
+        ...accumulated,
+      };
+      setAccumulated({
+        ...newState,
+        accumulated: newState.accumulated + mont,
+        backers: newState.backers + 1,
+      });
 
-    setOpenCloseM(!openCloseM);
-    setCloseComplet(!closeComplet);
+      setOpenCloseM(!openCloseM);
+      setCloseComplet(!closeComplet);
+    }
   };
 
   return (
