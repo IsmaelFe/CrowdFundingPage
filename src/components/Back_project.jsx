@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Back_project = ({ change, changeM }) => {
+const Back_project = ({ change, changeM, rezise }) => {
   return (
     <div className="container-back">
       <img
@@ -33,15 +33,17 @@ const Back_project = ({ change, changeM }) => {
                 />
               </g>
             </svg>
-            <p
-              style={
-                changeM
-                  ? { fontWeight: "700", color: "#147b74" }
-                  : { fontWeight: "700" }
-              }
-            >
-              Bookmark
-            </p>
+            {rezise > 700 ? (
+              <p
+                style={
+                  changeM
+                    ? { fontWeight: "700", color: "#147b74" }
+                    : { fontWeight: "700" }
+                }
+              >
+                Bookmark
+              </p>
+            ) : null}
           </button>
         </div>
       </div>
@@ -52,6 +54,7 @@ const Back_project = ({ change, changeM }) => {
 Back_project.propTypes = {
   change: PropTypes.func,
   changeM: PropTypes.bool,
+  rezise: PropTypes.number,
 };
 
 export default Back_project;

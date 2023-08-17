@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Accumulated_project from "./components/Accumulated_project";
 import Back_project from "./components/Back_project";
@@ -7,6 +7,9 @@ import Modal_component from "./components/Modal_component";
 import Nav_bar from "./components/Nav_bar";
 import Modal_completed from "./components/Modal_completed";
 import { container, dataAccumulated } from "./data/data";
+
+const imgDesktop = "../public/images/image-hero-desktop.jpg";
+const imgMobile = "../public/images/image-hero-mobile.jpg";
 
 let mont = 0;
 let accept = false;
@@ -38,6 +41,17 @@ function App() {
   const [openCloseM, setOpenCloseM] = useState(false);
   const [closeComplet, setCloseComplet] = useState(false);
   const [markBook, setMarckBook] = useState(false);
+  const [image, setImage] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setImage(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const completedModal = () => {
     let newModal = [...selectdModal];
@@ -118,14 +132,14 @@ function App() {
       {closeComplet ? <Modal_completed close={gotIt} /> : null}
       <div className="img-container">
         <img
-          src="../public/images/image-hero-desktop.jpg"
+          src={image > 700 ? imgDesktop : imgMobile}
           alt="img"
           className="img-desktop"
         ></img>
       </div>
-      <Nav_bar />
+      <Nav_bar rezise={image} />
       <main className="main">
-        <Back_project change={changeBook} changeM={markBook} />
+        <Back_project change={changeBook} changeM={markBook} rezise={image} />
         <Accumulated_project accumulate={accumulated} />
         <div className="container-card">
           <h2> About this project</h2>
