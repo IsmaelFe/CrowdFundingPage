@@ -103,7 +103,6 @@ p {
     gap: 5px;
     border-radius: 30px;
     border: none;
-    width: 20%;
     height: 50px;
     background-color: #F5F5F4;
     cursor: pointer;
@@ -256,7 +255,7 @@ hr {
     align-items: center;
     position: fixed;
     min-height: 100vh;
-    width: 100%;
+    max-width: 100%;
     z-index: 10;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -552,5 +551,47 @@ hr {
 
     .select-out {
         width: 70%;
+    }
+
+    .container-modal {
+        padding: 20px 10px;
+    }
+
+    .container-modal-1 {
+        max-width: 90%;
+        padding: 6%;
+    }
+
+    .selected {
+        gap: 10px;
+        grid-template-areas: 
+        "input-area tittle-area"
+        "input-area second-area"
+        "text-area text-area"
+        "num-area num-area";
+    }      
+ 
+    .selected p {
+        margin-left: 0;
+    }
+
+    .selected-number {
+        text-align: start;
+    }
+
+    .selected label {
+        margin-left: 5%;
+    }
+
+    .selected span {
+        margin-left: 5%;
+    }
+
+    .selected input {
+        margin-top: 15px;
+    }
+
+    .selected-pledge input {
+        margin-top: 0;
     }
 }
