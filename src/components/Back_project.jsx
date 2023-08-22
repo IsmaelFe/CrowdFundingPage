@@ -33,7 +33,7 @@ const Back_project = ({ change, changeM, rezise }) => {
                 />
               </g>
             </svg>
-            {rezise > 700 ? (
+            {rezise > 780 ? (
               <p
                 style={
                   changeM

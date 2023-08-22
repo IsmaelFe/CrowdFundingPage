@@ -106,6 +106,7 @@ p {
     height: 50px;
     background-color: #F5F5F4;
     cursor: pointer;
+    width: 19%;
 }
 
 .logo-mastercraft {
@@ -514,7 +515,31 @@ hr {
     margin-top: 25px;
 }
 
-@media (max-width: 700px) {
+.menu-mobile {
+    margin-left: 5%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 13%;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 8;
+    padding: 3% 0;
+    width: 90%;
+}
+
+.menu-mobile li {
+    color: black;
+    font-weight: 700;
+    margin-left: 5%;
+    padding: 5px;
+}
+
+.menu-mobile hr {
+    width: 100%;
+}
+
+@media (max-width: 780px) {
     .main {
         max-width: 90%;
     }
@@ -607,5 +632,14 @@ hr {
     .container-completed-1 {
         width: 80%;
         padding: 30px 20px;
+    }
+
+    .button-back-2 {
+        width: 21%;
+    }
+
+    .menu {
+        background-color: #8e8e8f00;
+        border: none;
     }
 }
