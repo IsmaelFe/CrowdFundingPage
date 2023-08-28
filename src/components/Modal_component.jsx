@@ -1,6 +1,11 @@
 import PropTypes from "prop-types";
 
-const Modal_component = ({ select, change, closeM, open, asing, update }) => {
+const Modal_component = ({ select, change, closeM, asing, update }) => {
+  const click = (number) => {
+    const valid = number;
+    update(valid);
+  };
+
   return (
     <div className="container-modal">
       <div className="container-modal-1">
@@ -58,7 +63,13 @@ const Modal_component = ({ select, change, closeM, open, asing, update }) => {
               <p>Enter your pledge</p>
               <div className="container-continue">
                 <input type="number" min={25} onKeyUp={(e) => asing(e)}></input>
-                <button onClick={update}>Continue</button>
+                <button
+                  onClick={() => {
+                    click(1);
+                  }}
+                >
+                  Continue
+                </button>
               </div>
             </div>
           ) : null}
@@ -87,7 +98,13 @@ const Modal_component = ({ select, change, closeM, open, asing, update }) => {
               <p>Enter your pledge</p>
               <div className="container-continue">
                 <input type="number" min={75} onKeyUp={(e) => asing(e)}></input>
-                <button onClick={update}>Continue</button>
+                <button
+                  onClick={() => {
+                    click(2);
+                  }}
+                >
+                  Continue
+                </button>
               </div>
             </div>
           ) : null}
@@ -121,7 +138,6 @@ Modal_component.propTypes = {
   select: PropTypes.array,
   change: PropTypes.func,
   closeM: PropTypes.func,
-  open: PropTypes.func,
   asing: PropTypes.func,
   update: PropTypes.func,
 };

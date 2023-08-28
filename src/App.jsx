@@ -106,19 +106,35 @@ function App() {
     }
   };
 
-  const backersUpdate = () => {
-    if (accept) {
-      const newState = {
-        ...accumulated,
-      };
-      setAccumulated({
-        ...newState,
-        accumulated: newState.accumulated + mont,
-        backers: newState.backers + 1,
-      });
+  const backersUpdate = (number) => {
+    if (number === 1 && mont >= 25) {
+      if (accept) {
+        const newState = {
+          ...accumulated,
+        };
+        setAccumulated({
+          ...newState,
+          accumulated: newState.accumulated + mont,
+          backers: newState.backers + 1,
+        });
 
-      setOpenCloseM(!openCloseM);
-      setCloseComplet(!closeComplet);
+        setOpenCloseM(!openCloseM);
+        setCloseComplet(!closeComplet);
+      }
+    } else if (number === 2 && mont >= 75) {
+      if (accept) {
+        const newState = {
+          ...accumulated,
+        };
+        setAccumulated({
+          ...newState,
+          accumulated: newState.accumulated + mont,
+          backers: newState.backers + 1,
+        });
+
+        setOpenCloseM(!openCloseM);
+        setCloseComplet(!closeComplet);
+      }
     }
   };
 

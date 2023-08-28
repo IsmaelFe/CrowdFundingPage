@@ -298,9 +298,6 @@ hr {
     cursor: pointer;
 }
 
-.selected label:hover {
-    color: #3CB5AA;
-}
 
 .selected p {
     line-height: 1.8em;
@@ -345,6 +342,27 @@ hr {
     color: #3CB5AA;
     font-weight: 700;
     grid-area: second-area;
+}
+
+.selected label:hover {
+    color: #3CB5AA;
+}
+
+.selected-2 label:hover {
+    color: #8e8e8fc0;
+    cursor: none;
+}
+
+.selected-2 input[type=radio] {
+    cursor: none;
+}
+
+.selected-2 input[type=radio]:hover {
+    border: 1px solid rgba(128, 128, 128, 0.301);
+}
+
+.selected-2 input[type=radio]:checked::before {
+    background-color: rgba(128, 128, 128, 0.301);
 }
 
 .selected-number {

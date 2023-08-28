@@ -29,7 +29,7 @@ export let container = [
 ];
 
 export let dataAccumulated = {
-  accumulated: 899414,
+  accumulated: 89914,
   back: 1000,
   backers: 5007,
   days: 56,
