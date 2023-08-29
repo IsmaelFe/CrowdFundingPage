@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Nav_bar = ({ rezise, open, openM }) => {
   return (
     <nav className="nav-bar">
-      <img src="./public/assets/images/logo.svg" alt="logo"></img>
+      <img src="../../public/assets/images/logo.svg" alt="logo"></img>
       <div className="nav-bar-2">
         {rezise > 780 ? (
           <ul>
@@ -16,12 +16,12 @@ const Nav_bar = ({ rezise, open, openM }) => {
           <button className="menu" onClick={openM}>
             {open ? (
               <img
-                src="./public/assets/images/icon-close-menu.svg"
+                src="../../public/assets/images/icon-close-menu.svg"
                 alt="close"
               ></img>
             ) : (
               <img
-                src="./public/assets/images/icon-hamburger.svg"
+                src="../../public/assets/images/icon-hamburger.svg"
                 alt="menu"
               ></img>
             )}

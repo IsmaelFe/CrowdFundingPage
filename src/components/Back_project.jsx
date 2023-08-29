@@ -6,7 +6,7 @@ const Back_project = ({ change, changeM, rezise }) => {
     <div className="container-back">
       <img
         className="logo-mastercraft"
-        src="./public/assets/images/logo-mastercraft.svg"
+        src="../../public/assets/images/logo-mastercraft.svg"
         alt="logo"
       ></img>
       <div className="container-back-1">
