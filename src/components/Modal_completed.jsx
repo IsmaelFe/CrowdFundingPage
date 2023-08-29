@@ -6,7 +6,7 @@ export const Modal_completed = ({ close }) => {
     <div className="container-completed">
       <div className="container-completed-1">
         <div>
-          <img src="/public/icon-check.svg" alt="check"></img>
+          <img src="./public/icon-check.svg" alt="check"></img>
         </div>
         <h3>Thanks for your support!</h3>
         <p>Your pledge brings us one step closer to sharing Mastercraft</p>
