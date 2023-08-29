@@ -12,7 +12,7 @@ const Modal_component = ({ select, change, closeM, asing, update }) => {
         <div className="icon-close">
           <h2>Back this project</h2>
           <button className="button-close" onClick={closeM}>
-            <img src="../../public/icon-close-modal.svg" alt="close"></img>
+            <img src="./icon-close-modal.svg" alt="close"></img>
           </button>
         </div>
         <p>
