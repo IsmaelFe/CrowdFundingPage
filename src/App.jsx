@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./App.css";
 import Accumulated_project from "./components/Accumulated_project";
 import Back_project from "./components/Back_project";
 import Card from "./components/Card";
@@ -9,8 +8,8 @@ import Modal_completed from "./components/Modal_completed";
 import { container, dataAccumulated } from "./data/data";
 import Menu_mobile from "./components/Menu_mobile";
 
-const imgDesktop = "../public/images/image-hero-desktop.jpg";
-const imgMobile = "../public/images/image-hero-mobile.jpg";
+const imgDesktop = "./public/images/image-hero-desktop.jpg";
+const imgMobile = "./public/images/image-hero-mobile.jpg";
 
 let mont = 0;
 let accept = false;
