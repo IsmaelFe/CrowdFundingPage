@@ -15,9 +15,9 @@ const Nav_bar = ({ rezise, open, openM }) => {
         ) : (
           <button className="menu" onClick={openM}>
             {open ? (
-              <img src="./public/icon-close-menu.svg" alt="close"></img>
+              <img src="../../public/icon-close-menu.svg" alt="close"></img>
             ) : (
-              <img src="./public/icon-hamburger.svg" alt="menu"></img>
+              <img src="../../public/icon-hamburger.svg" alt="menu"></img>
             )}
           </button>
         )}
