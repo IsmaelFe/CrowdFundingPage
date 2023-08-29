@@ -8,8 +8,8 @@ import Modal_completed from "./components/Modal_completed";
 import { container, dataAccumulated } from "./data/data";
 import Menu_mobile from "./components/Menu_mobile";
 
-const imgDesktop = "../../public/assets/images/image-hero-desktop.jpg";
-const imgMobile = "../../public/assets/images/image-hero-mobile.jpg";
+const imgDesktop = "./public/image-hero-desktop.jpg";
+const imgMobile = "./public/image-hero-mobile.jpg";
 
 let mont = 0;
 let accept = false;
