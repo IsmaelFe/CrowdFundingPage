@@ -106,7 +106,7 @@ p {
     height: 50px;
     background-color: #F5F5F4;
     cursor: pointer;
-    width: 19%;
+    padding-right: 15px;
 }
 
 .logo-mastercraft {
@@ -653,12 +653,12 @@ hr {
         padding: 30px 20px;
     }
 
-    .button-back-2 {
-        width: 21%;
-    }
-
     .menu {
         background-color: #8e8e8f00;
         border: none;
+    }
+
+    .button-back-2 {
+        padding: 0;
     }
 }
